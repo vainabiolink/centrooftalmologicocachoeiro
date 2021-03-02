@@ -563,7 +563,7 @@ progress {
 
 .botao-link{
   
-  animation: botao 10s ease infinite;
+  animation: botao 10s ease infinite, fade 1s;
   background-image: linear-gradient(-45deg, #16a085, #1abc9c, #60b9a1, #80dbc2, #a1ffe5);
   background-repeat: no-repeat;
   background-size: 300% 300%;
@@ -590,12 +590,14 @@ progress {
   }
 }
 
-@keyframes zoom{
-  0% {
-
+@keyframes fade{
+  from{
+    opacity: 0;
+    transform: scale(0.9);
   }
-  100% {
-
+  to{
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
